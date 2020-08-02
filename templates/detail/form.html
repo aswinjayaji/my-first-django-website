@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<p>Enter a product</p>
+ <!--this is GET by default ,method='POST' -->
+<form action='.' method='POST'>{% csrf_token %} <!--token is security or POST won't work -->
+    {{ form.as_p }} <!--p here is paragraph (can put ul,li,p)-->
+   <input type='submit' value='Save' />
+  <!--{{ list }}-->
+{% for instance in list %}
+ <p>{{ forloop.counter }} - <a href ='/create/{{instance.id}}/'>{{ instance.title}} </a></p>
+ {% endfor %}
+   <p><a href ='/list/'>list of Trial </a></p>
+   <p><a href ='../'>Back to Home Page </a></p>
+</form>
+{% endblock %}

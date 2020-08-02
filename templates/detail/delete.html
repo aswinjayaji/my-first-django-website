@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+
+{% block content %}
+ <!--this is GET by default ,method='POST' -->
+<form action='.' method='POST'>{% csrf_token %} <!--token is security or POST won't work -->
+    <h1>Do you want to delete the product "{{ object.title}}"?</h1> <!--p here is paragraph (can put ul,li,p)-->
+   <p><input type='submit' value='Confirm' /><a href='../'>  Cancel</a></p>
+</form>
+{% endblock %}

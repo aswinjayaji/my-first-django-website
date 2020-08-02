@@ -1,0 +1,8 @@
+{% extends 'home.html' %} 
+{% block content %}
+ <h3>List of Products<h3>
+  <!--{{ list }}-->
+{% for instance in list %}
+ <p>{{ forloop.counter }} - <a href ='/create/{{instance.id}}/'>{{ instance.title}} </a></p>
+ {% endfor %}
+{% endblock %}

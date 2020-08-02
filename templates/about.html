@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+
+{% block content %}<h1>About page</h1>
+<p>
+ {{ my_text }}, {{ my_number }},{{ my_html|title }}
+</p>
+ <ul>
+   <li>Item 1</li>
+   <li>Item 2</li>
+ </ul>
+ <ul>
+  {% for sub_item in my_list %}
+   {% if sub_item == 344 %}
+     <li>{{ forloop.counter }}-{{ sub_item|add:6  }}</li>
+   {% else %}
+     <li>{{ forloop.counter }}-{{ sub_item}}</li>
+   {% endif %}
+  {% endfor %}
+ </ul>
+{% endblock %}

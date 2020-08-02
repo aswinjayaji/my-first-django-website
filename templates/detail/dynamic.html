@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2>Product no: {{ dynamic.id }}<h2>
+<p>Title:{{dynamic.title}}</p>
+<p>Descripton:{{dynamic.description}}</p>
+<p>Price:{{dynamic.price}}</p>
+<em><a href="delete/">Delete:{{dynamic.title}}</a><em>
+<em><a href="../">Go Back</a><em>
+{% endblock %}

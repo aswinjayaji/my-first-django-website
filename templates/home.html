@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+     <title>This is a proffessional site</title>
+     <em>My First Django 
+      </em>
+      
+</head>
+<style>
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+</style>
+<body>
+
+{% include 'navbar.html' %} {% comment %} u can just add another html in 
+                              this page ,,,, thats just lit{% endcomment %}
+{% block content %}Fresher{% endblock %}
+</body>
+</html>
